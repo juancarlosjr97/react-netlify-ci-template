@@ -1,0 +1,17 @@
+[build.environment]
+  NODE_VERSION = "18.16.0"
+  NPM_VERSION = "9.5.1"
+
+[build]
+[context.deploy-preview]
+  command = "npm run build"
+  publish = "build"
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+  [plugins.inputs.thresholds]
+    performance = 0.9
+    accessibility = 0.9
+    best-practices = 0.9
+    seo = 0.9
