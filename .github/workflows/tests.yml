@@ -1,0 +1,31 @@
+name: Automated tests
+
+on:
+  push:
+    branches: ["*"]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - name: Checking project
+        uses: actions/checkout@v3
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "npm"
+
+      - name: Installing dependencies
+        run: npm ci
+
+      - name: Building project
+        run: npm run build
+
+      - name: Running tests
+        run: npm test
