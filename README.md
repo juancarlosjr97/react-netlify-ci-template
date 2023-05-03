@@ -94,7 +94,7 @@ These are the list of steps to follow to add a project using the Netlify UI for 
 
 - [ ] Link the project to Netlify Team, wait for the first deployment to be completed successfully and update the site name
 
-- [] Create a Pull Request with a visual change to test the deployment-preview
+- [ ] Create a Pull Request with a visual change to test the deployment-preview
 
 If all the checkboxes have been ticked, then have fun with Netlify!
 
