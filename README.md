@@ -50,7 +50,7 @@ The site of the project runs on Netlify with the following configuration:
    npm ci
    ```
 
-### Netlify Setup
+### Netlify Project Setup using CLI
 
 The setup of the Netlify project has been abstracted from the official [Netlify](https://docs.netlify.com/cli/get-started/#installation) documentation
 
@@ -81,6 +81,47 @@ The setup of the Netlify project has been abstracted from the official [Netlify]
    ```
 
    If the terminal returns "Success! Netlify CI/CD Configured!" the Netlify site has been configured successfully.
+
+## Netlify Project Setup using Netlify UI
+
+These are the list of steps to follow to add a project using the Netlify UI for continuous deployments and enabling deployment previews when a Pull Request has been raised.
+
+### Prerequisites for Netlify UI Setup
+
+- Netlify Account Created
+
+### Netlify Setup Checklist
+
+- [ ] Link the project to Netlify Team, wait for the first deployment to be completed successfully and update the site name
+
+- [] Create a Pull Request with a visual change to test the deployment-preview
+
+If all the checkboxes have been ticked, then have fun with Netlify!
+
+### Advance Configuration
+
+In order to enhance an advance configuration with Netlify a `netlify.toml` configuration file is required within the project.
+
+The default branch of the project, usually main or master, must contain the `netlify.toml` configuration.
+
+The following configuration can be used as a starting point https://github.com/juancarlosjr97/react-netlify-ci-template/blob/main/netlify.toml.
+
+#### Netlify Configuration File Explanation
+
+The Netlify configuration is based on a React Node project bootstrapped from [Create React App](https://create-react-app.dev/) by Facebook.
+
+1. The file contains the following configuration for node and npm:
+
+   - Node version 18.16.0
+   - NPM version 9.5.1
+
+2. The command to build the project by default is `npm run build`
+
+3. The base directory for the website to deploy using Netlify is the root of the project
+
+4. The output of the build command of the built website is the `build` directory
+
+5. The Google Lighthouse plugin has been enabled to analyze the built website on Netlify
 
 ### Netlify and GitHub Setup
 
