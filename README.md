@@ -1,8 +1,13 @@
 # React Netlify CI Template
 
 [![Automated tests](https://github.com/juancarlosjr97/react-netlify-ci-template/actions/workflows/tests.yml/badge.svg)](https://github.com/juancarlosjr97/react-netlify-ci-template/actions/workflows/tests.yml)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8943b9a2-b9a9-4e7d-8945-a45b10af708e/deploy-status)](https://app.netlify.com/sites/react-netlify-ci-template/deploys)
 
-This project is to demonstrate how to setup a project using [React](https://react.dev/) as a web application with Netlify with automated deployments and preview deployments and running checks for measuring the quality of web pages deployed.
+This project is to demonstrate how to set up a project using [React](https://react.dev/) as a web application with Netlify with automated deployments, preview deployments, and running checks for measuring the quality of web pages deployed using [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/).
+
+## Demo
+
+The project demo is available on the following [URL](https://react-netlify-ci-template.netlify.app/).
 
 ## Prerequisites
 
